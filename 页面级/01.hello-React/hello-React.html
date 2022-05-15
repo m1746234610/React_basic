@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script src="../js/react.development.js"></script>
+  <script src="../js/react-dom.development.js"></script>
+  <script src="../js/babel.min.js"></script>
+</head>
+
+<body>
+  <div id="root"></div>
+  <!-- 
+    react里面写的是jsx，不是js，jsx是js添加里7个规则变成的
+      1. jsx中，变量和标签可以混着写
+  
+  -->
+  <script type="text/babel"> // 此处必须写成babel
+    // 1. 定义虚拟dom
+    const VDOM = <h1>Hello,React</h1> // jsx: 变化一
+
+    // 2. 调用React-domApI,让React将虚拟dom转换成真实dom并渲染到页面
+    //     参数一: 虚拟dom  参数二: 容器
+    ReactDOM.render(VDOM, document.querySelector('#root'))
+
+
+    let arr = [
+      { name: '穆家宝', age: 22 },
+      { name: '老二', age: 23 }
+    ]
+  </script>
+</body>
+
+</html>
